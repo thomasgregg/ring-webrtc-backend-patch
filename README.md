@@ -3,7 +3,7 @@
 [![Latest release](https://img.shields.io/github/v/release/thomasgregg/ring-webrtc-backend-patch?display_name=tag&sort=semver)](https://github.com/thomasgregg/ring-webrtc-backend-patch/releases/latest)
 [![Validate](https://github.com/thomasgregg/ring-webrtc-backend-patch/actions/workflows/validate.yml/badge.svg)](https://github.com/thomasgregg/ring-webrtc-backend-patch/actions/workflows/validate.yml)
 [![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://www.hacs.xyz/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://raw.githubusercontent.com/thomasgregg/ring-webrtc-backend-patch/main/docs/images/license-mit.svg)](https://github.com/thomasgregg/ring-webrtc-backend-patch/blob/main/LICENSE)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/thomasgregg/ring-webrtc-backend-patch/main/custom_components/ring_webrtc_backend_patch/brand/icon@2x.png" alt="Ring WebRTC Backend Patch stream recovery icon" width="112">
