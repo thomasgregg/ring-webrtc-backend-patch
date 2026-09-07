@@ -5,6 +5,10 @@
 [![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://www.hacs.xyz/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/thomasgregg/ring-webrtc-backend-patch/main/custom_components/ring_webrtc_backend_patch/brand/icon@2x.png" alt="Ring WebRTC Backend Patch stream recovery icon" width="112">
+</p>
+
 ## Reliable Ring View reconnects after rotation and stream restarts
 
 Ring WebRTC Backend Patch is an optional companion integration for [Ring View](https://github.com/thomasgregg/ring-view). It works around a specific stream-cleanup defect in `ring-doorbell==0.9.14` that can leave the next Ring Live session unable to connect after the previous session closes.
