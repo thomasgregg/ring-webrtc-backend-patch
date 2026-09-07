@@ -91,12 +91,11 @@ def remove_patch_from_class(stream_class: type[Any]) -> bool:
     return True
 
 
-def apply_ring_patch() -> PatchStatus:
+def apply_ring_patch(ring_version: str) -> PatchStatus:
     """Apply the patch to the installed Ring WebRTC stream class."""
 
     from ring_doorbell.webrtcstream import RingWebRtcStream
 
-    ring_version = installed_ring_version()
     return apply_patch_to_class(RingWebRtcStream, ring_version)
 
 

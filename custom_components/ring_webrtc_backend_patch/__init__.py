@@ -7,7 +7,7 @@ from dataclasses import asdict
 from typing import TYPE_CHECKING
 
 from .const import DOMAIN
-from .patch import apply_ring_patch, remove_ring_patch
+from .patch import apply_ring_patch, installed_ring_version, remove_ring_patch
 
 if TYPE_CHECKING:
     from homeassistant.config_entries import ConfigEntry
@@ -19,7 +19,8 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Apply the compatibility patch when the config entry loads."""
 
-    status = apply_ring_patch()
+    ring_version = await hass.async_add_executor_job(installed_ring_version)
+    status = apply_ring_patch(ring_version)
     hass.data.setdefault(DOMAIN, {})[entry.entry_id] = asdict(status)
 
     if status.applied:
