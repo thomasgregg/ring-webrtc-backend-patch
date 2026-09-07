@@ -1,0 +1,15 @@
+{
+  "title": "Ring WebRTC Backend Patch",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Enable the Ring WebRTC backend patch",
+        "description": "Applies the verified shutdown fix to ring-doorbell 0.9.14. The built-in Ring integration remains in control of your account and devices."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "The Ring WebRTC Backend Patch is already configured."
+    }
+  }
+}
+

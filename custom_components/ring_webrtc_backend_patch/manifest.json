@@ -1,0 +1,12 @@
+{
+  "domain": "ring_webrtc_backend_patch",
+  "name": "Ring WebRTC Backend Patch",
+  "codeowners": ["@thomasgregg"],
+  "config_flow": true,
+  "dependencies": ["ring"],
+  "documentation": "https://github.com/thomasgregg/ring-webrtc-backend-patch",
+  "integration_type": "service",
+  "issue_tracker": "https://github.com/thomasgregg/ring-webrtc-backend-patch/issues",
+  "version": "0.1.0"
+}
+
