@@ -1,0 +1,38 @@
+name: Attach HACS release package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.release.tag_name }}
+
+      - name: Verify release version
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          manifest_version="$(jq -r '.version' custom_components/ring_webrtc_backend_patch/manifest.json)"
+          test "v${manifest_version}" = "${RELEASE_TAG}"
+
+      - name: Build HACS package
+        run: |
+          cd custom_components/ring_webrtc_backend_patch
+          zip -r "${RUNNER_TEMP}/ring_webrtc_backend_patch.zip" . \
+            -x '__pycache__/*' '*.py[cod]' '.DS_Store'
+
+      - name: Attach package to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          gh release upload "${RELEASE_TAG}" \
+            "${RUNNER_TEMP}/ring_webrtc_backend_patch.zip" \
+            --clobber

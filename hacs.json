@@ -1,6 +1,8 @@
 {
+  "filename": "ring_webrtc_backend_patch.zip",
+  "hide_default_branch": true,
+  "homeassistant": "2026.7.0",
   "name": "Ring WebRTC Backend Patch",
   "render_readme": true,
-  "homeassistant": "2026.7.0"
+  "zip_release": true
 }
-
